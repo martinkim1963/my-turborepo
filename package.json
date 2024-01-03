@@ -4,6 +4,12 @@
   "files": [
     "libs/**/*"
   ],
+  "exports": {
+    ".": {
+      "import": "./libs/luna-grid/dist/library.js",
+      "require": "./libs/luna-grid/dist/library.umd.cjs"
+    }
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
