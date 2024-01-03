@@ -1,5 +1,5 @@
 "use client"
-
+// import '../public/my-app'
 import { useEffect, useRef, useState } from "react"
 
 export const DataGrid = () => {
@@ -8,10 +8,17 @@ export const DataGrid = () => {
   const gridRef = useRef<any>()
 
   useEffect(() => {
-    setGrid(<lux-data-grid target="test-grid" ref={(r: any) => {
-      const grid = r.data.getGrid()
-      gridRef.current = grid
-    }} />)
+
+    const load = async () => {
+      await require('../public/my-app')
+    }
+    load().then(() => {
+      setGrid(<lux-data-grid target="test-grid" ref={(r: any) => {
+        const grid = r.data.getGrid()
+        gridRef.current = grid
+      }} />)
+    })
+
 
   }, [])
   return (<div style={{ height: "200px", width: "100%", background: 'white' }}>

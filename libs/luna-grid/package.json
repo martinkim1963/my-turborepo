@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/library.umd.cjs",
+  "module": "./dist/library.js",
+  "exports": {
+    ".": {
+      "import": "./dist/library.js",
+      "require": "./dist/library.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

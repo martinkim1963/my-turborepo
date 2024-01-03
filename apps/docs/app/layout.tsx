@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="stylesheet" href="/realgrid-style.css" />
-        <script src="/my-app.umd.cjs" />
+        {/* <script src="/my-app.umd.cjs" /> */}
       </head>
       <body className={inter.className}>{children}</body>
     </html>
