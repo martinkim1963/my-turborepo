@@ -16,6 +16,10 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="/realgrid-style.css" />
+        <script src="/my-app.umd.cjs" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
