@@ -3,17 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/library.umd.cjs",
-  "module": "./dist/library.js",
-  "exports": {
-    ".": {
-      "import": "./dist/library.js",
-      "require": "./dist/library.umd.cjs"
-    }
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -34,6 +23,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.0"
   }
 }

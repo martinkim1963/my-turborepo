@@ -2,12 +2,14 @@
   "name": "my-turborepo",
   "private": true,
   "files": [
-    "libs/**/*"
+    "./lib/luna-grid/dist"
   ],
+  "main": "./libs/luna-grid/dist/index.js",
+  "module": "./libs/luna-grid/dist/index.umd.cjs",
   "exports": {
-    ".": {
-      "import": "./libs/luna-grid/dist/library.js",
-      "require": "./libs/luna-grid/dist/library.umd.cjs"
+    "./grid": {
+      "import": "./libs/luna-grid/dist/index.js",
+      "require": "./libs/luna-grid/dist/index.umd.cjs"
     }
   },
   "scripts": {
